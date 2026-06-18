@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #ff3df2;
+  outline-offset: 4px;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl scroll-mt-28 px-4 py-12 sm:px-6 sm:py-16;
+  }
+
+  .section-heading {
+    @apply mb-7 flex items-end gap-3 font-mono;
+  }
+
+  .section-heading span {
+    @apply border-2 border-ink bg-neon px-2 py-1 text-xs font-black shadow-[3px_3px_0_#101114];
+  }
+
+  .section-heading h2 {
+    @apply text-3xl font-black sm:text-4xl;
+  }
+
+  .pixel-panel {
+    @apply border-2 border-ink;
+    clip-path: polygon(0 10px, 10px 10px, 10px 0, calc(100% - 10px) 0, calc(100% - 10px) 10px, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 10px calc(100% - 10px), 0 calc(100% - 10px));
+  }
+
+  .retro-button {
+    @apply inline-flex min-h-10 cursor-pointer items-center justify-center border-2 border-ink bg-paper font-mono font-bold uppercase shadow-[3px_3px_0_#101114] transition hover:-translate-y-0.5 hover:bg-neon hover:shadow-[5px_5px_0_#101114] active:translate-x-1 active:translate-y-1 active:shadow-none;
+  }
+
+  .primary-button {
+    @apply inline-flex min-h-12 cursor-pointer items-center justify-center border-2 border-ink bg-signal px-5 py-3 font-mono text-sm font-black uppercase text-white shadow-pixel transition hover:-translate-y-1 hover:bg-neon hover:text-ink active:translate-x-1 active:translate-y-1 active:shadow-none;
+  }
+
+  .contact-link {
+    @apply inline-flex min-h-12 items-center border-2 border-white/35 bg-white/10 px-3 py-2 font-mono text-sm text-paper transition hover:-translate-y-1 hover:border-neon hover:bg-neon hover:text-ink;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(16, 17, 20, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 17, 20, 0.08) 1px, transparent 1px),
+      linear-gradient(rgba(0, 245, 212, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 61, 242, 0.08) 1px, transparent 1px);
+    background-size:
+      20px 20px,
+      20px 20px,
+      100px 100px,
+      100px 100px;
+  }
+}
