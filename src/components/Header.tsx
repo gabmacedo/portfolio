@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react"
+import { smoothScrollToHash } from "../utils/smoothScroll"
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -8,21 +8,6 @@ const navItems = [
 ]
 
 export function Header() {
-  function handleAnchorClick(
-    event: MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) {
-    const target = document.querySelector(href)
-
-    if (!target) {
-      return
-    }
-
-    event.preventDefault()
-    target.scrollIntoView({ behavior: "smooth", block: "start" })
-    window.history.pushState(null, "", href)
-  }
-
   return (
     <header className="sticky top-0">
       <nav
@@ -31,7 +16,7 @@ export function Header() {
       >
         <a
           href="#home"
-          onClick={(event) => handleAnchorClick(event, "#home")}
+          onClick={(event) => smoothScrollToHash(event, "#home")}
           className="group inline-flex w-fit items-center gap-2 font-mono text-sm font-bold uppercase"
         >
           <span
@@ -53,7 +38,7 @@ export function Header() {
               <a
                 className="retro-button bg-paper px-3 py-2 text-xs"
                 href={item.href}
-                onClick={(event) => handleAnchorClick(event, item.href)}
+                onClick={(event) => smoothScrollToHash(event, item.href)}
               >
                 {item.label}
               </a>

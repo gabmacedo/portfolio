@@ -1,22 +1,7 @@
-import { MouseEvent } from "react"
 import profilePhoto from "../assets/pfp1080.png"
+import { smoothScrollToHash } from "../utils/smoothScroll"
 
 export function Hero() {
-  function handleAnchorClick(
-    event: MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) {
-    const target = document.querySelector(href)
-
-    if (!target) {
-      return
-    }
-
-    event.preventDefault()
-    target.scrollIntoView({ behavior: "smooth", block: "start" })
-    window.history.pushState(null, "", href)
-  }
-
   return (
     <section
       id="home"
@@ -38,9 +23,7 @@ export function Hero() {
             <a
               className="primary-button cursor-pointer"
               href={"#contato"}
-              onClick={(event) => handleAnchorClick(event, "#contato")}
-              target="_blank"
-              rel="noreferrer"
+              onClick={(event) => smoothScrollToHash(event, "#contato")}
             >
               Contato
             </a>
