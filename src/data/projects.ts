@@ -11,23 +11,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "Padoca",
+    name: "Plaete",
     description:
-      "Plataforma de delivery para padarias com catálogo, carrinho e fluxo de pedidos.",
-    stack: [
-      "TS",
-      "Fastify",
-      "Prisma",
-      "PostgreSQL",
-      "Redis",
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Firebase",
-    ],
+      "Plaete é uma CLI interativa para estruturar projetos de backend com sua linguagem preferida, estrutura HTTP e ORM. Ele cria os arquivos do projeto, renderiza os modelos e pode instalar dependências automaticamente.",
+    stack: ["JS", "Handlebars", "@clack/prompts"],
     year: 2026,
-    status: "Universitário",
-    repositoryUrl: "",
+    status: "Em andamento",
+    repositoryUrl: "https://github.com/gabmacedo/plaete",
   },
   {
     name: "Applicado",
@@ -65,6 +55,25 @@ export const projects: Project[] = [
     year: 2026,
     status: "Em andamento",
     repositoryUrl: "https://github.com/gabmacedo/url-shortner-backend",
+  },
+  {
+    name: "Padoca",
+    description:
+      "Plataforma de delivery para padarias com catálogo, carrinho e fluxo de pedidos.",
+    stack: [
+      "TS",
+      "Fastify",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "Firebase",
+    ],
+    year: 2026,
+    status: "Universitário",
+    repositoryUrl: "",
   },
   {
     name: "Calculadora de SLA",
