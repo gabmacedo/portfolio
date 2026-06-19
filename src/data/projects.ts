@@ -39,6 +39,15 @@ export const projects: Project[] = [
     repositoryUrl: "https://github.com/gabmacedo/applicado-backend",
   },
   {
+    name: "Terminal Shot",
+    description:
+      "Aplicacao web para gerar imagens personalizadas de terminais, inspirada no Carbon, mas focada em templates de terminal.",
+    stack: ["TS", "React", "Vite", "TailwindCSS", "html2image"],
+    year: 2026,
+    status: "Concluído",
+    repositoryUrl: "https://github.com/gabmacedo/terminal-shot",
+  },
+  {
     name: "URL Shortener",
     description:
       "Encurtador de URL com analytics de clicks, device, OS, browser e outras métricas.",
